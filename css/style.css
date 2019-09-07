@@ -1,0 +1,539 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: auto;
+}
+
+body {
+  color: #757575;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.clear:after {
+  content: ' ';
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+
+.index h1 {
+  padding: 40px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.index .wraper {
+  min-height: 360px;
+  width: 360px;
+  margin: auto;
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
+.index .wraper > div {
+  background: #000;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.index .p-static .wraper .static {
+  border: 2px solid #fff;
+  position: static;
+}
+.index .p-relative .wraper .relative {
+  border: 2px solid #fff;
+  position: relative;
+  top: -40px;
+  left: -40px;
+}
+.index .p-absolute .wraper {
+  position: relative;
+}
+.index .p-absolute .wraper .absolute {
+  border: 2px solid #fff;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+.index .p-fixed .wraper .fixed {
+  border: 2px solid #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.index .p-sticky .wraper {
+  position: relative;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.index .p-sticky .wraper .sticky {
+  border: 2px solid #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.index .p-z-index .wraper {
+  position: relative;
+  z-index: 1;
+}
+.index .p-z-index .wraper > div {
+  border: 2px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.index .p-z-index .wraper .first {
+  border-color: red;
+  z-index: 1;
+}
+.index .p-z-index .wraper .second {
+  border-color: green;
+  z-index: 1;
+}
+.index .p-z-index .wraper .third {
+  border-color: blue;
+  z-index: 1;
+}
+
+.demo h1 {
+  padding: 40px;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.demo .wraper {
+  height: auto;
+  width: 100%;
+  margin: auto;
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
+.demo .p-relative-eg .heading {
+  font-weight: normal;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+}
+.demo .p-relative-eg .heading:before {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+.demo .p-relative-eg .heading.h1 {
+  padding-left: 15px;
+  position: relative;
+}
+.demo .p-relative-eg .heading.h1::before {
+  width: 5px;
+  height: 100%;
+  left: 0px;
+  top: 0;
+  background: #fff;
+}
+.demo .p-relative-eg .heading.h2 {
+  padding-left: 0px;
+}
+.demo .p-relative-eg .heading.h2::before {
+  width: 25%;
+  height: 2px;
+  left: 0;
+  bottom: -10px;
+  background: #fff;
+}
+.demo .p-relative-eg .heading.h3 {
+  text-align: center;
+  padding-left: 0px;
+}
+.demo .p-relative-eg .heading.h3::before {
+  width: 25%;
+  height: 2px;
+  left: 50%;
+  margin-left: -12.5%;
+  bottom: -10px;
+  background: #fff;
+}
+.demo .p-relative-eg .heading.h4 {
+  text-align: right;
+  padding-left: 0px;
+}
+.demo .p-relative-eg .heading.h4::before {
+  width: 25%;
+  height: 2px;
+  right: 0;
+  bottom: -10px;
+  background: #fff;
+}
+.demo .p-transition-eg ul {
+  margin: 0px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.demo .p-transition-eg ul li {
+  padding: 10px 15px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.demo .p-transition-eg ul li:before {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+.demo .p-transition-eg ul.ul-side li:before {
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 0;
+  background: #fff;
+  transition: all .4s;
+}
+.demo .p-transition-eg ul.ul-side li:hover:before {
+  height: 100%;
+}
+.demo .p-transition-eg ul.ul-circle li:before {
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  border-radius: 100%;
+  background: #fff;
+  transition: all .4s ease-in-out;
+}
+.demo .p-transition-eg ul.ul-circle li:hover:before {
+  top: 50%;
+  opacity: 1;
+  margin-top: -2.5px;
+}
+.demo .p-transition-eg ul.ul-btm li:before {
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 5px;
+  background: #fff;
+  transition: all .4s ease-in-out;
+}
+.demo .p-transition-eg ul.ul-btm li:hover:before {
+  width: 80%;
+  margin-left: -40%;
+  margin-top: -2.5px;
+}
+.demo .p-transition-eg ul.ul-box li {
+  overflow: visible;
+}
+.demo .p-transition-eg ul.ul-box li:before {
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background: transparent;
+  border: 2px dashed #fff;
+  transition: all .4s ease-in-out;
+}
+.demo .p-transition-eg ul.ul-box li:hover:before {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+.demo .p-animation-eg ul {
+  margin: 0px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.demo .p-animation-eg ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.demo .p-animation-eg ul li:before, .demo .p-animation-eg ul li:after {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+.demo .p-animation-eg ul.ul-side li:before {
+  left: 0;
+  top: 0;
+  transition: all .4s ease-in-out;
+  width: 0;
+  height: 0;
+  border: 0px solid #fff;
+}
+.demo .p-animation-eg ul.ul-side li:after {
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  transition: all .4s ease-in-out;
+}
+.demo .p-animation-eg ul.ul-side li:hover:before {
+  width: 100%;
+  height: 100%;
+  border-left: 5px solid #fff;
+  border-top: 5px solid #fff;
+}
+.demo .p-animation-eg ul.ul-side li:hover:after {
+  width: 100%;
+  height: 100%;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+@keyframes runAround {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 100%;
+    top: 0;
+    margin-top: 0px;
+    margin-left: -10px;
+  }
+  50% {
+    left: 100%;
+    top: 100%;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+  75% {
+    left: 0;
+    top: 100%;
+    margin-left: 0px;
+    margin-top: -10px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    margin-top: 0;
+  }
+}
+.demo .p-animation-eg ul.ul-circle li:before {
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border-radius: 100%;
+  background: #fff;
+}
+.demo .p-animation-eg ul.ul-circle li:hover:before {
+  animation-name: runAround;
+  animation-duration: 1.5s;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+@keyframes strechExpandL {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    left: -15px;
+    right: -15px;
+  }
+}
+@keyframes strechExpandR {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    right: -15px;
+    bottom: -15px;
+  }
+}
+.demo .p-animation-eg ul.ul-expand li {
+  overflow: visible;
+}
+.demo .p-animation-eg ul.ul-expand li:before {
+  left: 0;
+  top: 0;
+  transition: all .4s ease-in-out;
+  width: 0;
+  height: 0;
+  border: 0px dotted #fff;
+}
+.demo .p-animation-eg ul.ul-expand li:after {
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  transition: all .4s ease-in-out;
+}
+.demo .p-animation-eg ul.ul-expand li:hover:before {
+  width: 100%;
+  height: 100%;
+  border-left: 4px dotted #fff;
+  border-top: 4px dotted #fff;
+  top: -15px;
+  left: -15px;
+  animation: strechExpandL 0.8s ease-in-out;
+}
+.demo .p-animation-eg ul.ul-expand li:hover:after {
+  width: 100%;
+  height: 100%;
+  border-right: 4px dotted #fff;
+  border-bottom: 4px dotted #fff;
+  bottom: -15px;
+  right: -15px;
+  animation: strechExpandR 0.8s ease-in-out;
+}
+@keyframes sideExpandL {
+  0% {
+    left: 0;
+    top: -4px;
+    height: 100%;
+  }
+  50% {
+    width: 50%;
+    height: 100%;
+    top: -4px;
+  }
+  100% {
+    left: -16px;
+  }
+}
+@keyframes sideExpandR {
+  0% {
+    right: 0;
+    bottom: -4px;
+    height: 100%;
+  }
+  50% {
+    width: 50%;
+    height: 100%;
+    bottom: -4px;
+  }
+  100% {
+    right: -16px;
+  }
+}
+.demo .p-animation-eg ul.ul-expand-side li {
+  overflow: visible;
+}
+.demo .p-animation-eg ul.ul-expand-side li:before {
+  left: 0;
+  top: -4px;
+  transition: width .4s ease-in-out;
+  width: 0;
+  height: 100%;
+  border: 0px solid #fff;
+}
+.demo .p-animation-eg ul.ul-expand-side li:after {
+  right: 0;
+  bottom: -4px;
+  width: 0;
+  height: 100%;
+  transition: width .4s ease-in-out;
+}
+.demo .p-animation-eg ul.ul-expand-side li:hover:before {
+  width: 50%;
+  height: 100%;
+  border: 4px solid #fff;
+  border-right: 0px solid #fff;
+  top: -4px;
+  left: -16px;
+  animation: sideExpandL 0.8s ease-out;
+}
+.demo .p-animation-eg ul.ul-expand-side li:hover:after {
+  width: 50%;
+  height: 100%;
+  border: 4px solid #fff;
+  border-left: 0px solid #fff;
+  bottom: -4px;
+  right: -16px;
+  animation: sideExpandR 0.8s ease-out;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,162 @@
+.index{
+  h1{
+    padding: 40px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .wraper{
+    min-height: 360px;
+    width: 360px;
+    margin: auto;
+    background:#222;
+    color: #fff;
+    padding: 20px;
+
+    > div{
+      background: #000;
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  }
+
+  .p-static{
+
+    .wraper{
+
+      >div{
+
+      }
+
+      .static{
+        border: 2px solid #fff;
+        position: static;
+        //don't work
+        // top: -40px;
+        // left: -40px;
+        // bottom: 40px;
+        // bottom: 30px;
+      }
+    }
+  }
+
+  .p-relative{
+
+    .wraper{
+
+      >div{
+
+      }
+
+      .relative{
+        border: 2px solid #fff;
+        position: relative;
+        top: -40px;
+        left: -40px;
+        // right: -40px;
+        // bottom: -40px;
+      }
+    }
+  }
+
+  .p-absolute{
+
+    .wraper{
+      position: relative;
+
+      >div{
+
+      }
+
+      .absolute{
+        border: 2px solid #fff;
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        // right: -40px;
+        // bottom: -40px;
+      }
+    }
+  }
+
+  .p-fixed{
+
+    .wraper{
+      // position: relative;
+
+      >div{
+
+      }
+
+      .fixed{
+        border: 2px solid #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        // right: 0px;
+        // bottom: 0px;
+      }
+    }
+  }
+
+  .p-sticky{
+
+    .wraper{
+      position: relative;
+      max-height: 400px;
+      overflow-y: scroll;
+
+      >div{
+
+      }
+
+      .sticky{
+        border: 2px solid #fff;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        // right: 0px;
+        // bottom: 0px;
+      }
+    }
+  }
+
+  .p-z-index{
+
+    .wraper{
+      position: relative;
+      z-index: 1;
+
+      >div{
+        border: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .first{
+        border-color: red;
+        z-index: 1;
+      }
+
+      .second{
+        border-color: green;
+        z-index: 1;
+      }
+      
+      .third{
+        border-color: blue;
+        z-index: 1;
+      }
+    }
+  }
+}
